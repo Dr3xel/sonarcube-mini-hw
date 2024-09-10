@@ -1,20 +1,17 @@
-# Use external PostgreSQL (already deployed)
 postgresql:
   enabled: true  
 
-# SonarQube database settings
 jdbcUrl: "jdbc:postgresql://sonarqube-postgresql.sonarqube.svc.cluster.local:5432/sonarqube"
 jdbcUsername: "sonarqube"
 jdbcPassword: "dm123"
 
-# Persistence settings for SonarQube
+
 persistence:
   enabled: true
   storageClass: "standard"
   accessMode: ReadWriteOnce
   size: 10Gi
 
-# Resources for SonarQube
 resources:
   limits:
     cpu: 1000m

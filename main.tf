@@ -8,14 +8,12 @@ provider "helm" {
   }
 }
 
-# Define the namespace for SonarQube
 resource "kubernetes_namespace" "sonarqube" {
   metadata {
     name = "sonarqube"
   }
 }
 
-# Helm release for SonarQube, using external PostgreSQL
 resource "helm_release" "sonarqube" {
   name       = "sonarqube"
   repository = "https://SonarSource.github.io/helm-chart-sonarqube"
