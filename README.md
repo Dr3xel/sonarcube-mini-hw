@@ -5,11 +5,13 @@ Homework from Mintos
 
 Command order:
 >chmod +x setup.sh
+
 >bash setup.sh
 
 =====================
 
 Enable port forwarding to check the web UI:
+
 >kubectl port-forward sonarqube-sonarqube-0 9000:9000 -n sonarqube
 
 =====================
