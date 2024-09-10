@@ -15,6 +15,9 @@ Enable port forwarding to check the web UI:
 =====================
 
 Access 127.0.0.1:9000 in your browser
+
 Default username: admin
+
 Default password: admin
+
 After loging you will be forced to change your admin password
