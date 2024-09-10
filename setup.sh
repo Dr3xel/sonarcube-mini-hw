@@ -84,6 +84,8 @@ minikube addons enable ingress
 # Verify that Minikube started successfully
 minikube status
 
+terraform init
+
 terraform apply --auto-approve
 
 check_pods() {
