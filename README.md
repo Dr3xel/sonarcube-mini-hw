@@ -1,20 +1,22 @@
 ## **SonarCube Mini HW**
 
-This project automates the setup of a SonarQube environment using Minikube, Kubernetes, Helm, and Terraform. It provisions a local Kubernetes cluster, installs necessary tools, and deploys a SonarQube instance with PostgreSQL as the database. The setup script is designed to run in a Linux environment.
+This project automates the setup of a SonarQube environment using **Minikube, Kubernetes, Helm, and Terraform**. It provisions a local Kubernetes cluster, installs necessary tools, and deploys a SonarQube instance with PostgreSQL as the database. The setup script is designed to run in a Linux environment.
 
 **Table of Contents**
 
 1. Introduction
 
-2. Prerequisites
+2. Architecture
 
-3. Setup and Installation
+3. Prerequisites
 
-4. Usage
+4. Setup and Installation
 
-5. Configuration
+5. Usage
 
-6. Cleanup
+6. Configuration
+
+7. Cleanup
 
 ## **Introduction**
 
@@ -28,29 +30,33 @@ A Terraform configuration (`main.tf`) for creating a SonarQube deployment in a K
 
 A YAML configuration file (`sonarqube-config.yaml`) for configuring SonarQube with PostgreSQL as the database.
 
+## **Architecture**
+
+![architecture drawio](https://github.com/user-attachments/assets/1c59700b-4eb9-4460-aec5-76be8bf00904)
+
 ## **Prerequisites**
 
 Make sure your system meets the following requirements:
 
-Linux (Ubuntu or similar distribution)
+> Linux (Ubuntu or similar distribution)
 
-Bash shell
+> Bash shell
 
-Curl
+> Curl
 
-Sudo privileges
+> Sudo privileges
 
 ## **Setup and Installation**
 
 To set up and install the required tools and deploy the SonarQube environment, follow these steps:
 
-1. Clone the repository:
+**1. Clone the repository:**
 
 ``git clone https://github.com/Dr3xel/sonarcube-mini-hw.git``
 
 ``cd sonarcube-mini-hw``
 
-2. Run the setup script:
+**2. Run the setup script:**
  
 The setup.sh script will install Minikube, Kubectl, Helm, and Terraform if they are not already installed, and then use Terraform to deploy the SonarQube environment.
 
@@ -70,7 +76,7 @@ Deploy SonarQube using Terraform and Helm.
 
 Verify that all pods are running in the sonarqube namespace.
 
-3. Verify the setup:
+**3. Verify the setup:**
 
 Once the setup completes, the script will display the status of the SonarQube environment. You can verify the Minikube status, Kubernetes pods, and Helm releases.
 
@@ -92,11 +98,11 @@ And then openning `127.0.0.1:9000` in your browser
 
 The main configuration file for the SonarQube Helm chart is `sonarqube-config.yaml`. It contains the following key settings:
 
-PostgreSQL: Enabled with default settings for the JDBC URL, username, and password.
+**PostgreSQL:** Enabled with default settings for the JDBC URL, username, and password.
 
-Persistence: Configured for persistent storage with 10Gi of space.
+**Persistence:** Configured for persistent storage with 10Gi of space.
 
-Resource Limits: CPU and memory limits/requests are set for the SonarQube pods.
+**Resource Limits:** CPU and memory limits/requests are set for the SonarQube pods.
 
 Feel free to modify these configurations to suit your needs.
 
