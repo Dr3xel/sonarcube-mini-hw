@@ -120,7 +120,3 @@ To stop and delete the Minikube cluster, run:
 
 ``minikube delete``
 
-
-## **Architecture**
-
-![architecture drawio](https://github.com/user-attachments/assets/1c59700b-4eb9-4460-aec5-76be8bf00904)
